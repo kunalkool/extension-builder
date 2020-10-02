@@ -70,7 +70,7 @@ export default class Builder {
       }
 
       const zip = new AdmZip();
-      zip.addLocalFolder(`${WORKSPACE}/appinventor/components/build/extensions`);
+      zip.addLocalFolder(`${WORKSPACE}/out`);
       zip.addFile('build-info.json', new Buffer(JSON.stringify(job.extraInfo)));
       const zipPath = `${OUTPUT_DIR}/${jobId}.zip`;
       zip.writeZip(zipPath);
