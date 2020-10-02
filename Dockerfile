@@ -9,9 +9,8 @@ RUN apt-get update -yq \
 
 # prepare App Inventor workspace
 # This tag should have a message to avoid build error -------------->>>>>>>>>>> VVVVVVVVV
-RUN git clone --depth 1 https://github.com/kunalkool/extension-template -b /usr/workspace \
+RUN git clone --depth 1 https://github.com/kunalkool/extension-template  /usr/workspace \
     && cd /usr/workspace \
-    && git submodule update --init
 
 # put it at last since it is sometimes modified
 RUN npm i -g typescript \
