@@ -9,7 +9,7 @@ RUN apt-get update -yq \
 
 # prepare App Inventor workspace
 # This tag should have a message to avoid build error -------------->>>>>>>>>>> VVVVVVVVV
-RUN git clone --depth 1 https://github.com/kunalkool/extension-template -b e-b-1.4.0 /usr/workspace \
+RUN git clone --depth 1 https://github.com/kunalkool/extension-template -b /usr/workspace \
     && cd /usr/workspace \
     && git submodule update --init
 
